@@ -37,7 +37,7 @@ if st.button('ON'):
     client1= paho.Client("VAL")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
-    message =json.dumps({"Act1":off})
+    message =json.dumps({"Act1":act1})
     ret= client1.publish("SALUDO", message)
  
     #client1.subscribe("Sensores")
